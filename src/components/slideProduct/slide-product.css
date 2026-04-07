@@ -40,6 +40,7 @@
   transition: 0.5s;
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
   &:hover {
     border: 2px solid var(--main-color);
     box-shadow: 10px 10px 15px #949494;
@@ -116,7 +117,6 @@
 
 .container-details {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,8 +196,6 @@
 
 .product-details-info .add-to-cart.in-cart p {
   color: var(--main-color);
-  
-
 }
 .product-details-info .add-to-cart span {
   color: var(--white-color);
@@ -265,8 +263,6 @@
   gap: 20px;
 }
 
-
-
 .im-product img {
   width: 150px;
   height: 150px;
@@ -280,8 +276,6 @@
   border: 1px solid var(--main-color);
   scale: 1.05;
 }
-
-
 
 .product.in-cart .icons .btn-cart {
   background-color: var(--main-color);
@@ -300,7 +294,6 @@
 }
 
 .product .check-cart {
-  
   position: absolute;
   top: 10px;
   left: 50%;
@@ -309,7 +302,6 @@
   transition: .5s;
   display: flex;
   align-items: center;
-  
 }
 .check-cart {
   display: block;
@@ -322,7 +314,7 @@
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   text-align: center;
-  position: static; /* Make sure it's not absolute */
+  position: static;
 }
 .product .check-cart {
   position: absolute;
@@ -340,7 +332,6 @@
 
 .img-product img{
   margin-top: 70px;
-  
   height: 130px;
 }
 .img-product {
@@ -348,8 +339,7 @@
 }
 
 .product {
-  position: relative; /* Add this! */
-  /* ...existing styles... */
+  position: relative;
 }
 
 .product .icons {
@@ -369,4 +359,179 @@
   right: 40px;
   opacity: 1;
   pointer-events: auto;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+  .slide-products {
+    height: auto;
+    padding: 30px 0;
+    margin-top: 15px;
+  }
+
+  .top-slide h2 {
+    font-size: 22px;
+  }
+
+  .top-slide p {
+    font-size: 13px;
+    display: none;
+  }
+
+  .product {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    padding: 15px 10px;
+  }
+
+  .product .img-product {
+    height: 120px;
+    padding: 0 10px;
+  }
+
+  .img-product img {
+    height: 100px;
+    margin-top: 50px;
+  }
+
+  .product .name {
+    font-size: 13px;
+  }
+
+  .product .price {
+    font-size: 16px;
+  }
+
+  .product .stars svg {
+    font-size: 12px;
+  }
+
+  /* Show icons on mobile without hover */
+  .product .icons {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .icons span {
+    width: 32px;
+    height: 32px;
+  }
+
+  .product .check-cart {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  /* Product Details */
+  .container-details {
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0 16px;
+    gap: 20px;
+  }
+
+  .product-details-img {
+    height: 220px;
+    width: 100%;
+  }
+
+  .product-details-info {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .product-details-info h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .product-details-info p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .product-details-info .price {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .product-details-info .add-to-cart {
+    width: 160px;
+    height: 36px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .images {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .im-product img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .similar-products h3 {
+    font-size: 18px;
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-products {
+    padding: 20px 0;
+  }
+
+  .top-slide h2 {
+    font-size: 18px;
+  }
+
+  .product {
+    min-height: 200px;
+    padding: 10px 8px;
+  }
+
+  .product .img-product {
+    height: 90px;
+  }
+
+  .img-product img {
+    height: 80px;
+    margin-top: 40px;
+  }
+
+  .product .name {
+    font-size: 11px;
+  }
+
+  .product .price {
+    font-size: 14px;
+  }
+
+  .icons span {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .product-details-info h2 {
+    font-size: 18px;
+  }
+
+  .product-details-info .add-to-cart {
+    width: 140px;
+    height: 34px;
+    font-size: 13px;
+  }
 }

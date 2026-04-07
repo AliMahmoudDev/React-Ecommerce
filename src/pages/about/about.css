@@ -38,3 +38,57 @@
   font-size: 1rem;
   margin-bottom: 6px;
 }
+
+/* ============ RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+  .about-page {
+    margin: 25px auto;
+    padding: 24px 18px;
+    border-radius: 8px;
+    gap: 18px;
+  }
+
+  .about-page h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .about-page p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .about-section h2 {
+    font-size: 1.05rem;
+  }
+
+  .about-section li {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    margin: 15px 10px;
+    padding: 20px 14px;
+    gap: 14px;
+  }
+
+  .about-page h1 {
+    font-size: 1.3rem;
+  }
+
+  .about-page p {
+    font-size: 0.88rem;
+  }
+
+  .about-section h2 {
+    font-size: 0.95rem;
+  }
+
+  .about-section li {
+    font-size: 0.85rem;
+  }
+}

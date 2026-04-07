@@ -13,6 +13,7 @@ import Search from "./pages/search/Search";
 import Favorites from "./pages/favorites/Favorites";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -23,7 +24,6 @@ function App() {
       </header>
       <AutoScrollTop/>
       <AnimatePresence>
-        
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
@@ -33,9 +33,8 @@ function App() {
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />}/>
-
+          <Route path="*" element={<NotFound />} />
         </Routes>
-        
       </AnimatePresence>
     </>
   );

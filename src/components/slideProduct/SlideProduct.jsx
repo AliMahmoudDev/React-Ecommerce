@@ -36,6 +36,32 @@ function SlideProduct({ data, title }) {
           }}
           navigation={true}
           modules={[Autoplay, Navigation]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.2,
+              spaceBetween: 10,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 12,
+            },
+            640: {
+              slidesPerView: 2.5,
+              spaceBetween: 14,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 16,
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 18,
+            },
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+          }}
         >
           {data.map((item) => {
             return (

@@ -120,3 +120,28 @@ a {
 .in-fav .icons .btn-favorite svg {
   fill: var(--white-color);
 }
+
+/* ============ RESPONSIVE GLOBAL ============ */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+  }
+
+  header {
+    margin-bottom: 10px;
+  }
+
+  .cart-toast {
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 110px;
+  }
+}
